@@ -15,6 +15,6 @@
     "platforms": "ststm32",
     "dependencies":
     {
-      "disco-bsp": "https://github.com/heia-fr/embsys-disco-bsp.git"
+      "disco-bsp": "https://github.com/heia-fr/embsys-disco-bsp.git#v1.0.1"
     }
   }
