@@ -783,12 +783,8 @@ void Adafruit_GFX::drawBitmap(int16_t x, int16_t y, const uint8_t bitmap[],
     @param    color 16-bit 5-6-5 Color to draw with
 */
 /**************************************************************************/
-<<<<<<< HEAD
-void Adafruit_GFX::drawBitmap(int16_t x, int16_t y, const uint8_t *bitmap, int16_t w,
-=======
 // cppcheck-suppress constParameter
 void Adafruit_GFX::drawBitmap(int16_t x, int16_t y, uint8_t *bitmap, int16_t w,
->>>>>>> new
                               int16_t h, uint16_t color) {
 
   int16_t byteWidth = (w + 7) / 8; // Bitmap scanline pad = whole byte
@@ -822,12 +818,8 @@ void Adafruit_GFX::drawBitmap(int16_t x, int16_t y, uint8_t *bitmap, int16_t w,
     @param    bg 16-bit 5-6-5 Color to draw background with
 */
 /**************************************************************************/
-<<<<<<< HEAD
-void Adafruit_GFX::drawBitmap(int16_t x, int16_t y, const uint8_t *bitmap, int16_t w,
-=======
 // cppcheck-suppress constParameter
 void Adafruit_GFX::drawBitmap(int16_t x, int16_t y, uint8_t *bitmap, int16_t w,
->>>>>>> new
                               int16_t h, uint16_t color, uint16_t bg) {
 
   int16_t byteWidth = (w + 7) / 8; // Bitmap scanline pad = whole byte
@@ -983,15 +975,10 @@ void Adafruit_GFX::drawGrayscaleBitmap(int16_t x, int16_t y,
     @param    h   Height of bitmap in pixels
 */
 /**************************************************************************/
-<<<<<<< HEAD
-void Adafruit_GFX::drawGrayscaleBitmap(int16_t x, int16_t y, const uint8_t *bitmap,
-                                       uint8_t *mask, int16_t w, int16_t h) {
-=======
 // cppcheck-suppress constParameter
 void Adafruit_GFX::drawGrayscaleBitmap(int16_t x, int16_t y, uint8_t *bitmap,
                                       // cppcheck-suppress constParameter
                                       uint8_t *mask, int16_t w, int16_t h) {
->>>>>>> new
   int16_t bw = (w + 7) / 8; // Bitmask scanline pad = whole byte
   uint8_t byte = 0;
   startWrite();
