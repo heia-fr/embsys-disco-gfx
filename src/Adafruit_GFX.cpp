@@ -309,6 +309,7 @@ void Adafruit_GFX::fillRect(int16_t x, int16_t y, int16_t w, int16_t h,
     @param    color 16-bit 5-6-5 Color to fill with
 */
 /**************************************************************************/
+// cppcheck-suppress unusedFunction
 void Adafruit_GFX::fillScreen(uint16_t color) {
   fillRect(0, 0, _width, _height, color);
 }
@@ -350,6 +351,7 @@ void Adafruit_GFX::drawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1,
     @param    color 16-bit 5-6-5 Color to draw with
 */
 /**************************************************************************/
+// cppcheck-suppress unusedFunction
 void Adafruit_GFX::drawCircle(int16_t x0, int16_t y0, int16_t r,
                               uint16_t color) {
 #if defined(ESP8266)
@@ -445,6 +447,7 @@ void Adafruit_GFX::drawCircleHelper(int16_t x0, int16_t y0, int16_t r,
     @param    color 16-bit 5-6-5 Color to fill with
 */
 /**************************************************************************/
+// cppcheck-suppress unusedFunction
 void Adafruit_GFX::fillCircle(int16_t x0, int16_t y0, int16_t r,
                               uint16_t color) {
   startWrite();
@@ -516,6 +519,7 @@ void Adafruit_GFX::fillCircleHelper(int16_t x0, int16_t y0, int16_t r,
     @param    color 16-bit 5-6-5 Color to draw with
 */
 /**************************************************************************/
+// cppcheck-suppress unusedFunction
 void Adafruit_GFX::drawRect(int16_t x, int16_t y, int16_t w, int16_t h,
                             uint16_t color) {
   startWrite();
@@ -593,6 +597,7 @@ void Adafruit_GFX::fillRoundRect(int16_t x, int16_t y, int16_t w, int16_t h,
     @param    color 16-bit 5-6-5 Color to draw with
 */
 /**************************************************************************/
+// cppcheck-suppress unusedFunction
 void Adafruit_GFX::drawTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1,
                                 int16_t x2, int16_t y2, uint16_t color) {
   drawLine(x0, y0, x1, y1, color);
@@ -612,6 +617,7 @@ void Adafruit_GFX::drawTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1,
     @param    color 16-bit 5-6-5 Color to fill/draw with
 */
 /**************************************************************************/
+// cppcheck-suppress unusedFunction
 void Adafruit_GFX::fillTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1,
                                 int16_t x2, int16_t y2, uint16_t color) {
 
@@ -710,6 +716,7 @@ void Adafruit_GFX::fillTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1,
     @param    color 16-bit 5-6-5 Color to draw with
 */
 /**************************************************************************/
+// cppcheck-suppress unusedFunction
 void Adafruit_GFX::drawBitmap(int16_t x, int16_t y, const uint8_t bitmap[],
                               int16_t w, int16_t h, uint16_t color) {
 
@@ -776,6 +783,7 @@ void Adafruit_GFX::drawBitmap(int16_t x, int16_t y, const uint8_t bitmap[],
     @param    color 16-bit 5-6-5 Color to draw with
 */
 /**************************************************************************/
+// cppcheck-suppress constParameter
 void Adafruit_GFX::drawBitmap(int16_t x, int16_t y, uint8_t *bitmap, int16_t w,
                               int16_t h, uint16_t color) {
 
@@ -810,6 +818,7 @@ void Adafruit_GFX::drawBitmap(int16_t x, int16_t y, uint8_t *bitmap, int16_t w,
     @param    bg 16-bit 5-6-5 Color to draw background with
 */
 /**************************************************************************/
+// cppcheck-suppress constParameter
 void Adafruit_GFX::drawBitmap(int16_t x, int16_t y, uint8_t *bitmap, int16_t w,
                               int16_t h, uint16_t color, uint16_t bg) {
 
@@ -844,6 +853,7 @@ void Adafruit_GFX::drawBitmap(int16_t x, int16_t y, uint8_t *bitmap, int16_t w,
     @param    color 16-bit 5-6-5 Color to draw pixels with
 */
 /**************************************************************************/
+// cppcheck-suppress unusedFunction
 void Adafruit_GFX::drawXBitmap(int16_t x, int16_t y, const uint8_t bitmap[],
                                int16_t w, int16_t h, uint16_t color) {
 
@@ -878,6 +888,7 @@ void Adafruit_GFX::drawXBitmap(int16_t x, int16_t y, const uint8_t bitmap[],
     @param    h   Height of bitmap in pixels
 */
 /**************************************************************************/
+// cppcheck-suppress unusedFunction
 void Adafruit_GFX::drawGrayscaleBitmap(int16_t x, int16_t y,
                                        const uint8_t bitmap[], int16_t w,
                                        int16_t h) {
@@ -964,8 +975,10 @@ void Adafruit_GFX::drawGrayscaleBitmap(int16_t x, int16_t y,
     @param    h   Height of bitmap in pixels
 */
 /**************************************************************************/
+// cppcheck-suppress constParameter
 void Adafruit_GFX::drawGrayscaleBitmap(int16_t x, int16_t y, uint8_t *bitmap,
-                                       uint8_t *mask, int16_t w, int16_t h) {
+                                      // cppcheck-suppress constParameter
+                                      uint8_t *mask, int16_t w, int16_t h) {
   int16_t bw = (w + 7) / 8; // Bitmask scanline pad = whole byte
   uint8_t byte = 0;
   startWrite();
@@ -994,6 +1007,7 @@ void Adafruit_GFX::drawGrayscaleBitmap(int16_t x, int16_t y, uint8_t *bitmap,
     @param    h   Height of bitmap in pixels
 */
 /**************************************************************************/
+// cppcheck-suppress unusedFunction
 void Adafruit_GFX::drawRGBBitmap(int16_t x, int16_t y, const uint16_t bitmap[],
                                  int16_t w, int16_t h) {
   startWrite();
@@ -1074,7 +1088,9 @@ void Adafruit_GFX::drawRGBBitmap(int16_t x, int16_t y, const uint16_t bitmap[],
     @param    h   Height of bitmap in pixels
 */
 /**************************************************************************/
+// cppcheck-suppress constParameter
 void Adafruit_GFX::drawRGBBitmap(int16_t x, int16_t y, uint16_t *bitmap,
+                                // cppcheck-suppress constParameter
                                  uint8_t *mask, int16_t w, int16_t h) {
   int16_t bw = (w + 7) / 8; // Bitmask scanline pad = whole byte
   uint8_t byte = 0;
@@ -1322,6 +1338,7 @@ void Adafruit_GFX::setTextSize(uint8_t s_x, uint8_t s_y) {
     @param  x   0 thru 3 corresponding to 4 cardinal rotations
 */
 /**************************************************************************/
+// cppcheck-suppress unusedFunction
 void Adafruit_GFX::setRotation(uint8_t x) {
   rotation = (x & 3);
   switch (rotation) {
@@ -1344,6 +1361,7 @@ void Adafruit_GFX::setRotation(uint8_t x) {
     @param  f  The GFXfont object, if NULL use built in 6x8 font
 */
 /**************************************************************************/
+// cppcheck-suppress unusedFunction
 void Adafruit_GFX::setFont(const GFXfont *f) {
   if (f) {          // Font struct pointer passed in?
     if (!gfxFont) { // And no current font struct?
@@ -1509,6 +1527,7 @@ void Adafruit_GFX::getTextBounds(const std::string &str, int16_t x, int16_t y,
     @param   i  True if you want to invert, false to make 'normal'
 */
 /**************************************************************************/
+// cppcheck-suppress unusedFunction
 void Adafruit_GFX::invertDisplay(bool i) {
   // Do nothing, must be subclassed if supported by hardware
   (void)i; // disable -Wunused-parameter warning
@@ -1521,6 +1540,7 @@ void Adafruit_GFX::invertDisplay(bool i) {
    @brief    Create a simple drawn button UI element
 */
 /**************************************************************************/
+// cppcheck-suppress uninitMemberVar
 Adafruit_GFX_Button::Adafruit_GFX_Button(void) { _gfx = 0; }
 
 /**************************************************************************/
@@ -1539,6 +1559,7 @@ Adafruit_GFX_Button::Adafruit_GFX_Button(void) { _gfx = 0; }
 */
 /**************************************************************************/
 // Classic initButton() function: pass center & size
+// cppcheck-suppress unusedFunction
 void Adafruit_GFX_Button::initButton(Adafruit_GFX *gfx, int16_t x, int16_t y,
                                      uint16_t w, uint16_t h, uint16_t outline,
                                      uint16_t fill, uint16_t textcolor,
@@ -1644,6 +1665,7 @@ void Adafruit_GFX_Button::initButtonUL(Adafruit_GFX *gfx, int16_t x1,
    'pressed'
 */
 /**************************************************************************/
+// cppcheck-suppress unusedFunction
 void Adafruit_GFX_Button::drawButton(bool inverted) {
   uint16_t fill, outline, text;
 
@@ -1677,6 +1699,7 @@ void Adafruit_GFX_Button::drawButton(bool inverted) {
     @returns  True if within button graphics outline
 */
 /**************************************************************************/
+// cppcheck-suppress unusedFunction
 bool Adafruit_GFX_Button::contains(int16_t x, int16_t y) {
   return ((x >= _x1) && (x < (int16_t)(_x1 + _w)) && (y >= _y1) &&
           (y < (int16_t)(_y1 + _h)));
@@ -1688,6 +1711,7 @@ bool Adafruit_GFX_Button::contains(int16_t x, int16_t y) {
    @returns  True if was not-pressed before, now is.
 */
 /**************************************************************************/
+// cppcheck-suppress unusedFunction
 bool Adafruit_GFX_Button::justPressed() { return (currstate && !laststate); }
 
 /**************************************************************************/
@@ -1696,6 +1720,7 @@ bool Adafruit_GFX_Button::justPressed() { return (currstate && !laststate); }
    @returns  True if was pressed before, now is not.
 */
 /**************************************************************************/
+// cppcheck-suppress unusedFunction
 bool Adafruit_GFX_Button::justReleased() { return (!currstate && laststate); }
 
 // -------------------------------------------------------------------------
@@ -1789,6 +1814,7 @@ void GFXcanvas1::drawPixel(int16_t x, int16_t y, uint16_t color) {
    (off)
 */
 /**********************************************************************/
+// cppcheck-suppress unusedFunction
 bool GFXcanvas1::getPixel(int16_t x, int16_t y) const {
   int16_t t;
   switch (rotation) {
@@ -2426,6 +2452,7 @@ uint16_t GFXcanvas16::getRawPixel(int16_t x, int16_t y) const {
     @param  color 16-bit 5-6-5 Color to fill with
 */
 /**************************************************************************/
+// cppcheck-suppress unusedFunction
 void GFXcanvas16::fillScreen(uint16_t color) {
   if (buffer) {
     uint8_t hi = color >> 8, lo = color & 0xFF;
@@ -2452,6 +2479,7 @@ void GFXcanvas16::fillScreen(uint16_t color) {
             SPECIFIC endian-ness, it just flips the bytes within each word.
 */
 /**************************************************************************/
+// cppcheck-suppress unusedFunction
 void GFXcanvas16::byteSwap(void) {
   if (buffer) {
     uint32_t i, pixels = WIDTH * HEIGHT;
