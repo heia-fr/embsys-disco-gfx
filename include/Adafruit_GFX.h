@@ -299,10 +299,10 @@ class GFXcanvas1 : public Adafruit_GFX {
 public:
   GFXcanvas1(uint16_t w, uint16_t h);
   ~GFXcanvas1(void);
-  void drawPixel(int16_t x, int16_t y, uint16_t color);
-  void fillScreen(uint16_t color);
-  void drawFastVLine(int16_t x, int16_t y, int16_t h, uint16_t color);
-  void drawFastHLine(int16_t x, int16_t y, int16_t w, uint16_t color);
+  void drawPixel(int16_t x, int16_t y, uint16_t color) override;
+  void fillScreen(uint16_t color) override;
+  void drawFastVLine(int16_t x, int16_t y, int16_t h, uint16_t color) override;
+  void drawFastHLine(int16_t x, int16_t y, int16_t w, uint16_t color) override;
   bool getPixel(int16_t x, int16_t y) const;
   /**********************************************************************/
   /*!
@@ -331,10 +331,10 @@ class GFXcanvas8 : public Adafruit_GFX {
 public:
   GFXcanvas8(uint16_t w, uint16_t h);
   ~GFXcanvas8(void);
-  void drawPixel(int16_t x, int16_t y, uint16_t color);
-  void fillScreen(uint16_t color);
-  void drawFastVLine(int16_t x, int16_t y, int16_t h, uint16_t color);
-  void drawFastHLine(int16_t x, int16_t y, int16_t w, uint16_t color);
+  void drawPixel(int16_t x, int16_t y, uint16_t color) override;
+  void fillScreen(uint16_t color) override;
+  void drawFastVLine(int16_t x, int16_t y, int16_t h, uint16_t color) override;
+  void drawFastHLine(int16_t x, int16_t y, int16_t w, uint16_t color) override;
   uint8_t getPixel(int16_t x, int16_t y) const;
   /**********************************************************************/
   /*!
@@ -358,11 +358,11 @@ class GFXcanvas16 : public Adafruit_GFX {
 public:
   GFXcanvas16(uint16_t w, uint16_t h);
   ~GFXcanvas16(void);
-  void drawPixel(int16_t x, int16_t y, uint16_t color);
-  void fillScreen(uint16_t color);
+  void drawPixel(int16_t x, int16_t y, uint16_t color) override;
+  void fillScreen(uint16_t color) override;
   void byteSwap(void);
-  void drawFastVLine(int16_t x, int16_t y, int16_t h, uint16_t color);
-  void drawFastHLine(int16_t x, int16_t y, int16_t w, uint16_t color);
+  void drawFastVLine(int16_t x, int16_t y, int16_t h, uint16_t color) override;
+  void drawFastHLine(int16_t x, int16_t y, int16_t w, uint16_t color) override;
   uint16_t getPixel(int16_t x, int16_t y) const;
   /**********************************************************************/
   /*!

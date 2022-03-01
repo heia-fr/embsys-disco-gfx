@@ -123,6 +123,7 @@ static const unsigned char font[] = {
 };
 
 // allow clean compilation with [-Wunused-const-variable=] and [-Wall]
+// cppcheck-suppress unusedFunction
 static inline void avoid_unused_const_variable_compiler_warning(void) {
   (void)font;
 }
