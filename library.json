@@ -1,20 +1,16 @@
 {
-    "name": "DiscoGfx",
-    "version": "0.1.1",
-    "description": "Disco GFX library",
-    "authors":
-    [
-      {
-        "name": "Jacques Supcik",
-        "email": "jacques.supcik@hefr.ch",
-        "maintainer": true
-      }
-    ],
-    "license": "Apache-2.0",
-    "frameworks": "mbed",
-    "platforms": "ststm32",
-    "dependencies":
-    {
-      "disco-bsp": "https://github.com/heia-fr/embsys-disco-bsp.git#v0.1.0"
-    }
+  "name": "DiscoGfx",
+  "version": "0.1.1",
+  "description": "Disco GFX library",
+  "authors": [{
+    "name": "Jacques Supcik",
+    "email": "jacques.supcik@hefr.ch",
+    "maintainer": true
+  }],
+  "license": "Apache-2.0",
+  "frameworks": "mbed",
+  "platforms": "ststm32",
+  "dependencies": {
+    "DiscoBsp": "https://github.com/heia-fr/embsys-disco-bsp.git#v0.1.0"
   }
+}
